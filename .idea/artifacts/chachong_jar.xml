@@ -1,0 +1,15 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="chachong:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/chachong_jar</output-path>
+    <root id="archive" name="chachong.jar">
+      <element id="module-output" name="chachong" />
+      <element id="extracted-dir" path="$APPLICATION_HOME_DIR$/lib/junit4.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/../commons.lang3.StringUtils.jar - 副本/commons.lang3.StringUtils.jar/common-lang3.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/../hanlp-1.7.2(jardataproperties)/hanlp-1.7.2-release/hanlp-1.7.2.jar" path-in-jar="/" />
+      <element id="file-copy" path="$PROJECT_DIR$/src/META-INF/lib/hanlp.properties" />
+      <element id="directory" name="data">
+        <element id="dir-copy" path="$PROJECT_DIR$/data/dictionary" />
+      </element>
+    </root>
+  </artifact>
+</component>

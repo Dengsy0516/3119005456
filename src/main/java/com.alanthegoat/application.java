@@ -27,7 +27,6 @@ public class application {
         String s1 = BufferedInputFile.read(file1);
         String s2 = BufferedInputFile.read(file2);
 
-
         long l3 = System.currentTimeMillis();
         MySimHash hash1 = new MySimHash(s1, 64);
         MySimHash hash2 = new MySimHash(s2, 64);
