@@ -6,6 +6,9 @@ import java.math.BigInteger;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import org.apache.commons.lang3.StringUtils;
+import org.jsoup.Jsoup;
+import org.jsoup.safety.Whitelist;
 
 public class MySimHash {
     private String tokens; //字符串
@@ -19,6 +22,19 @@ public class MySimHash {
         this.strSimHash = this.simHash();
     }
 
+    /**
+     * 清除html标签
+     */
+    private String cleanResume(String content) {
+        // 若输入为HTML,下面会过滤掉所有的HTML的tag
+        content = Jsoup.clean(content, Whitelist.none());
+        content = StringUtils.lowerCase(content);
+        String[] strings = {" ", "\n", "\r", "\t", "\\r", "\\n", "\\t", "&nbsp;"};
+        for (String s : strings) {
+            content = content.replaceAll(s, "");
+        }
+        return content;
+    }
 
     /**
      * 这个是对整个字符串进行hash计算
